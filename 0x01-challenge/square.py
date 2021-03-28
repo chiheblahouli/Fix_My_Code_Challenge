@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""Mysqr class"""
+"""square class"""
 
 
 class Square():
-    """sqr"""
+    """ Square class """
+
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """init"""
+        """ Constructor """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -17,16 +18,16 @@ class Square():
         return self.width * self.height
 
     def permiter_of_my_square(self):
-        """ perim"""
+        """ permiter of my square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ str func"""
+        """ String representation of the object """
         return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
-    """done"""
+
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
